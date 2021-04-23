@@ -1,0 +1,27 @@
+<button routerLink="/categories/{{item.category}}">Back</button>
+<h3>
+    <img src="{{ item.image }}" alt="">
+    <a [title]="item.name">
+        {{item.name}}
+    </a>
+    <p *ngIf="item.description">
+        Description: {{ item.description }}
+    </p>
+    <p>
+      Rating: {{ item.rating }}
+    </p>
+    <p>
+        Likes: {{ item.likes }}
+    </p>
+    <div class="buttons">
+        <button (click)="share()">
+            Share
+        </button>
+        <button (click)="liked()">
+            Like
+        </button>
+        <button (click)="remove()">
+            Remove
+        </button>
+    </div>
+</h3>
