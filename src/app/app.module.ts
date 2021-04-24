@@ -8,13 +8,25 @@ import {ProductItemComponent} from './product-item/product-item.component';
 import {RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CategoryListComponent } from './category-list/category-list.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ForgetPassComponent } from './forget-pass/forget-pass.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductItemComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    SignInComponent,
+    SignUpComponent,
+    HeaderComponent,
+    FooterComponent,
+    ForgetPassComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

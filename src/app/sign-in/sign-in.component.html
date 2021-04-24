@@ -1,0 +1,27 @@
+<div class="circle"></div>
+
+<div class="sign-up">
+
+  <div class="signup">
+    <img class= "logo" src="https://upload.wikimedia.org/wikipedia/commons/4/42/OLX_New_Logo.png">
+    <div class = "rega">
+      <form>
+        <section class="user">
+          <input class="login" id="login" name="login" placeholder="Номер телефона или электронная почта">
+        </section>
+        <section class="parol">
+          <input class="pass" id="pass" name="pass" type="password" placeholder="Введите пароль">
+        </section>
+        <button (click)="getUser()" class="btn-reg">
+          Войти
+        </button>
+      </form>
+      <p class="for-p">
+        <a routerLink="/forget-pass" class ="forgot-pass">Забыли пароль?</a>
+      </p>
+      <p class="acc"> Нет аккаунта? <strong routerLink="/sign-up" id="zhirn">Регистрация</strong></p>
+    </div>
+
+  </div>
+
+</div>

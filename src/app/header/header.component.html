@@ -1,0 +1,40 @@
+<header id="header">
+  <div>
+    <ul class="leftmenu">
+      <li><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/42/OLX_New_Logo.png"></li>
+      <li id="pmenu"><a href="" target="_blank">Категории</a></li>
+      <li id="pmenu"><a href="" target="_blank">Категории</a></li>
+      <li id="pmenu"><a href="" target="_blank">Категории</a></li>
+      <li id="search">
+        <p><select class="region" name="menu" size="1">
+          <option value="first">Шымкент</option>
+          <option selected="selected" value="second">Алматы</option>
+          <option value="third">Астана</option>
+          <option value="fourth">Атырау</option>
+          <option value="fourth">Актау</option>
+          <option value="fourth">Актобе</option>
+          <option value="fourth">Жезказган</option>
+          <option value="fourth">Семей</option>
+          <option value="fourth">Кызылорда</option>
+          <option value="fourth">Петропавловск</option>
+          <option value="fourth">Павлодар</option>
+          <option value="fourth">Усть-Каменогорск</option>
+          <option value="fourth">Уральск</option>
+        </select>
+          <input class="search-field" type="search" name="q" placeholder="Поиск по сайту">
+          <input class="btn-search" type="submit" value="Найти"></p>
+      </li>
+      <li id="btns-head">
+        <p> Профиль
+          <img routerLink="/user-profile" class= "profile" src="https://st4.depositphotos.com/8440746/19844/v/450/depositphotos_198441584-stock-illustration-avatar-icon-vector-male-user.jpg">
+        </p>
+        <button (click)="logOut()" routerLink="/">Выйти</button>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul class="rightmenu">
+
+    </ul>
+  </div>
+</header>

@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  background-color: #3D66FF;
+}
+.circle{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 100px solid #CDDBFF;
+  border-radius: 50%;
+  width: 900px;
+  height: 900px;
+  max-height: 100vh;
+  margin-top: -200px;
+  z-index: -1;
+}
+
+.signup{
+  align-content: center;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+.logo{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 95px;
+  margin-bottom: 20px;
+}
+.login, .pass, .pass2{
+  font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+  color: #999999;
+  background: #fafafa;
+  width: 280px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #efefef;
+  font-size: 12px;
+  margin-left: 3px;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.btn-reg{
+  background-color: #003035;
+  border-radius: 5px;
+  height: 40px;
+  width: 294px;
+  color: white;
+  font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+  appearance: none;
+  border: 0px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 3px;
+  font-size: 14px;
+}
+.acc{
+  font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  width: 400px;
+  text-align: center;
+  font-size: 15px;
+  color: #1C1E21;
+  margin-left: -20px;
+}
+.for-p{
+  font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  height: 5px;
+  text-align: center;
+  font-size: 15px;
+  color:#3D66FF;
+  margin-top: 10px;
+  padding-bottom: 50px;
+}
+#zhirn{
+  color: #3D66FF;
+}
+.forgot-pass{
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+.acc{
+  font-weight: 400;
+  text-align: center;
+  margin-left: -55px;
+}
+
+
+.btn-vxod{
+  background-color: #3D66FF;
+  border-radius: 5px;
+  border: 5px #ffffff;
+  height: 40px;
+  width: 100px;
+  color: white;
+  font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+  appearance: none;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 3px;
+  font-size: 14px;
+}
