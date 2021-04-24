@@ -7,10 +7,10 @@
     <div class = "rega">
       <form>
         <section class="user">
-          <input class="login" id="login" name="login" placeholder="Номер телефона или электронная почта">
+          <input class="login" id="login" name="login" [(ngModel)]="login" placeholder="Номер телефона или электронная почта">
         </section>
         <section class="parol">
-          <input class="pass" id="pass" name="pass" type="password" placeholder="Введите пароль">
+          <input class="pass" id="pass" name="pass" [(ngModel)]="pass" type="password" placeholder="Введите пароль">
         </section>
         <button (click)="getUser()" class="btn-reg">
           Войти

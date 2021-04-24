@@ -1,4 +1,73 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100%;
+  background-color: #3D66FF;
+}
+.circle{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  border: 100px solid #CDDBFF;
+  border-radius: 50%;
+  width: 900px;
+  height: 900px;
+  max-height: 100vh;
+  margin-top: -200px;
+  z-index: -1;
+}
+
 a {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.mainbox{
+  /*background: white;*/
+  width: 1200px;
+  height: 100%;
+  margin-left: 120px;
+}
+
+.box{
+  background: #F1F3F8;
+  align-content: center;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 70px;
+  margin-left: 120px;
+  margin-top: 50px;
+}
+
+.box:hover{
+  background: #3D66FF;
+  box-shadow: 0 0 10px #003035;
+  align-content: center;
+  color: #F1F3F8;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 70px;
+  margin-left: 120px;
+  margin-top: 50px;
+}
+
+
+.zagolovok{
+  padding-top: 100px;
+  margin-left: 120px;
+  font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+  color: #003035;
+  font-size: 30px;
 }

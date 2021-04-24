@@ -1,12 +1,26 @@
 <app-header></app-header>
 
+<!--<h2>Products</h2>-->
+<!--<button routerLink="/categories">Back</button>-->
+<!--<div *ngFor="let item of items">-->
+<!--  <div routerLink="products/{{item.id}}">-->
+<!--  <img src="{{ item.image }}" alt="">-->
+<!--    <p>{{item.name}}</p>-->
+<!--  <p>{{item.rating}}</p>-->
+<!--  </div>-->
+<!--</div>-->
 <h2>Products</h2>
 <button routerLink="/categories">Back</button>
-<div *ngFor="let item of items">
-  <div routerLink="products/{{item.id}}">
-  <img src="{{ item.image }}" alt="">
-    <p>{{item.name}}</p>
-  <p>{{item.rating}}</p>
+<div class="circle"></div>
+<div class="mainbox">
+
+  <div class="items" *ngFor="let item of items">
+    <div class="box" routerLink="products/{{item.id}}">
+      <img src="{{ item.image }}" alt="">
+      <p>{{item.name}}</p>
+      <p>{{item.rating}}</p>
+<!--      </div>-->
+    </div>
   </div>
 </div>
 

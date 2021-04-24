@@ -1,9 +1,18 @@
 <app-header></app-header>
 
-<h2>Categories</h2>
+<!--<h2>Categories</h2>-->
 
-<div *ngFor="let category of categories">
+<!--<div *ngFor="let category of categories">-->
+<!--    <a routerLink="/categories/{{category.id}}">{{ category.name }}</a>-->
+<!--</div>-->
+
+<div class="circle"></div>
+<main class="mainbox">
+  <h2 class="zagolovok">Категории</h2>
+
+  <div class="box" *ngFor="let category of categories">
     <a routerLink="/categories/{{category.id}}">{{ category.name }}</a>
-</div>
+  </div>
+</main>
 
 <app-footer></app-footer>

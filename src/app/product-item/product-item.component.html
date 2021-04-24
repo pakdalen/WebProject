@@ -1,31 +1,63 @@
 <app-header></app-header>
 
-<button routerLink="/categories/{{item.category}}">Back</button>
-<h3>
+<!--<button routerLink="/categories/{{item.category}}">Back</button>-->
+<!--<h3>-->
+<!--    <img src="{{ item.image }}" alt="">-->
+<!--    <a [title]="item.name">-->
+<!--        {{item.name}}-->
+<!--    </a>-->
+<!--    <p *ngIf="item.description">-->
+<!--        Description: {{ item.description }}-->
+<!--    </p>-->
+<!--    <p>-->
+<!--      Rating: {{ item.rating }}-->
+<!--    </p>-->
+<!--    <p>-->
+<!--        Likes: {{ item.likes }}-->
+<!--    </p>-->
+<!--    <div class="buttons">-->
+<!--        <button (click)="share()">-->
+<!--            Share-->
+<!--        </button>-->
+<!--        <button (click)="liked()">-->
+<!--            Like-->
+<!--        </button>-->
+<!--        <button (click)="remove()">-->
+<!--            Remove-->
+<!--        </button>-->
+<!--    </div>-->
+<!--</h3>-->
+
+<!--<div class="circle"></div>-->
+<main class="mainbox">
+  <button routerLink="/categories/{{item.category}}">Back</button>
+  <h3>
     <img src="{{ item.image }}" alt="">
     <a [title]="item.name">
-        {{item.name}}
+      {{item.name}}
     </a>
     <p *ngIf="item.description">
-        Description: {{ item.description }}
+      Description: {{ item.description }}
     </p>
     <p>
       Rating: {{ item.rating }}
     </p>
     <p>
-        Likes: {{ item.likes }}
+      Likes: {{ item.likes }}
     </p>
     <div class="buttons">
-        <button (click)="share()">
-            Share
-        </button>
-        <button (click)="liked()">
-            Like
-        </button>
-        <button (click)="remove()">
-            Remove
-        </button>
+      <button (click)="share()">
+        Share
+      </button>
+      <button (click)="liked()">
+        Like
+      </button>
+      <button (click)="remove()">
+        Remove
+      </button>
     </div>
-</h3>
+  </h3>
+</main>
+
 
 <app-footer></app-footer>

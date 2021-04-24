@@ -1,24 +1,67 @@
-<div *ngIf="user">
-  <h2>{{user.username | uppercase}} Details</h2>
-  <div><span>id: </span>{{user.id}}</div>
-  <div>
-    <label>name:
-      <p>{{user.username}}</p>
-    </label>
+<!--<div *ngIf="user">-->
+<!--  <h2>{{user.username | uppercase}} Details</h2>-->
+<!--  <div><span>id: </span>{{user.id}}</div>-->
+<!--  <div>-->
+<!--    <label>name:-->
+<!--      <p>{{user.username}}</p>-->
+<!--    </label>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <label>login:-->
+<!--      <p>{{user.email}}</p>-->
+<!--    </label>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <label>password:-->
+<!--      <p>{{user.password}}</p>-->
+<!--    </label>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <label>phone:-->
+<!--      <p>{{user.phoneNumber}}</p>-->
+<!--    </label>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="circle"></div>
+<main class="mainbox">
+  <div class="userinfo" *ngIf="user">
+
+    <div>
+      <label class="titlename">Имя:
+        <form>
+          <section class="user">
+            <input class="user-name" [(ngModel)]="username" name="login" placeholder = "{{user.username}}">
+          </section>
+        </form>
+      </label>
+    </div>
+    <div>
+      <label class="titlename">Логин:
+        <form>
+          <section class="user">
+            <input class="user-login" [(ngModel)]="email" name="login" placeholder = "{{user.email}}">
+          </section>
+        </form>
+      </label>
+    </div>
+    <div>
+      <label class="titlename">Пароль:
+        <form>
+          <section class="user">
+            <input class="user-pass" [(ngModel)]="pass" name="password" type = "password" placeholder = {{user.password}}>
+          </section>
+        </form>
+      </label>
+    </div>
+    <div>
+      <label class="titlename">Номер телефона:
+        <form>
+          <section class="user">
+            <input class="user-phone" [(ngModel)]="phone" name="phone" placeholder = "{{user.phoneNumber}}">
+          </section>
+        </form>
+      </label>
+    </div>
+    <button class="btn-save" (click)="save()">СОХРАНИТЬ</button>
   </div>
-  <div>
-    <label>login:
-      <p>{{user.email}}</p>
-    </label>
-  </div>
-  <div>
-    <label>password:
-      <p>{{user.password}}</p>
-    </label>
-  </div>
-  <div>
-    <label>phone:
-      <p>{{user.phoneNumber}}</p>
-    </label>
-  </div>
-</div>
+</main>

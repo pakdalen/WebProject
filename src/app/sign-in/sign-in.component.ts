@@ -9,19 +9,21 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
 
+  login: string;
+  pass: string;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
   getUser(): void {
-    const login = (document.getElementById('login') as HTMLInputElement).value;
-    const pass = (document.getElementById('pass') as HTMLInputElement).value;
+    // const login = (document.getElementById('login') as HTMLInputElement).value;
+    // const pass = (document.getElementById('pass') as HTMLInputElement).value;
 
-    if (login === '' || pass === ''){
+    if (this.login === '' || this.pass === ''){
       alert('Заполните поля!');
       return;
     }
-    UserService.getUser(login, pass);
+    UserService.getUser(this.login, this.pass);
     if (UserService.user == null) {
       alert('Нет такого пользователя');
       return;

@@ -7,21 +7,21 @@
     <div class = "rega">
       <form>
         <section class="user">
-          <input class="login" name="login" placeholder="Номер телефона или электронная почта">
+          <input id="phone" class="login" [(ngModel)]="phone" name="login" placeholder="Номер телефона">
+        </section>
+        <section class="user">
+          <input id="email" class="login" [(ngModel)]="email" name="login" placeholder="Электронная почта">
         </section>
         <section class="parol">
-          <input class="pass" name="pass" type="password" placeholder="Введите пароль">
+          <input id="pass" class="pass" [(ngModel)]="pass" name="pass" type="password" placeholder="Введите пароль">
         </section>
         <section class="parol2">
-          <input class="pass2" name="pass" type="password" placeholder="Подтвердите пароль">
+          <input id="pass2" class="pass2" [(ngModel)]="pass2" name="pass" type="password" placeholder="Подтвердите пароль">
         </section>
-        <button class="btn-reg">
+        <button (click)="newUser()" class="btn-reg">
           Регистрация
         </button>
       </form>
-      <p class="for-p">
-        <a class ="forgot-pass">Забыли пароль?</a>
-      </p>
       <p class="acc"> Уже есть аккаунт? <strong routerLink="/sign-in" id="zhirn">Войти</strong></p>
     </div>
 
