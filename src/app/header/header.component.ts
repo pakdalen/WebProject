@@ -14,5 +14,6 @@ export class HeaderComponent implements OnInit {
   }
   logOut(): void {
     UserService.user = null;
+    localStorage.clear()
   }
 }

@@ -2,13 +2,21 @@ import { Injectable } from '@angular/core';
 
 import { User } from './user';
 import { users } from './users';
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
   static user: User;
-  constructor() { }
+  constructor(private http: HttpClient) { }
+  private httpHeaders = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
+  private url = 'http://localhost:8000/api/'
 
   static getUser(phone: string, password: string): void {
     const ttt = users.find(u => u.phoneNumber === phone && u.password === password
@@ -37,5 +45,9 @@ export class UserService {
     ttt.phoneNumber = phone;
     ttt.username = username;
     ttt.password = pass;
+  }
+
+  Login(loginInfo): Observable<any> {
+    return this.http.post<any>(this.url+'user/login/', {...loginInfo}, this.httpHeaders)
   }
 }

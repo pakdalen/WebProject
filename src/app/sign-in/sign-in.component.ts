@@ -11,23 +11,25 @@ export class SignInComponent implements OnInit {
 
   login: string;
   pass: string;
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private userService: UserService  
+  ) { }
 
   ngOnInit(): void {
   }
   getUser(): void {
-    // const login = (document.getElementById('login') as HTMLInputElement).value;
-    // const pass = (document.getElementById('pass') as HTMLInputElement).value;
+    this.userService.Login({ 
+      username: this.login, 
+      password: this.pass 
+    }).subscribe(res => {
+      if (res.token) {
+        localStorage.setItem('token', res.token)
 
-    if (this.login === '' || this.pass === ''){
-      alert('Заполните поля!');
-      return;
-    }
-    UserService.getUser(this.login, this.pass);
-    if (UserService.user == null) {
-      alert('Нет такого пользователя');
-      return;
-    }
-    this.router.navigate(['/categories']);
+        this.router.navigate(['/categories']);
+      } 
+
+      else alert('Пароль неправильный!')
+    })
   }
 }

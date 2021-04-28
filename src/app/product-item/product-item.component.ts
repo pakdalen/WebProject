@@ -10,12 +10,11 @@ import { Location } from '@angular/common';
   styleUrls: ['./product-item.component.css']
 })
 export class ProductItemComponent implements OnInit {
-  item: Item;
+  public item;
   @Output() removeItem = new EventEmitter<Item>();
 
   constructor(private route: ActivatedRoute, private productService: ProductService,
-              private location: Location) {
-
+    private location: Location) {
   }
   share(): void {
     // window.alert('The product has been shared!');
@@ -34,7 +33,9 @@ export class ProductItemComponent implements OnInit {
 
   getProduct(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.productService.getProduct(id)
-      .subscribe(item => this.item = item);
+    this.productService.GetList()
+      .subscribe(res => {
+        this.item = res.find(o => o.id == id)
+      });
   }
 }

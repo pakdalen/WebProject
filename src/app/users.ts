@@ -8,7 +8,13 @@ export let users: User[] = [
     password: '123',
     phoneNumber: '87017010101'
   },
-
+  {
+    id: 0,
+    username: 'test',
+    email: 'test',
+    password: '123',
+    phoneNumber: '87017010101'
+  },
 ]
 // id: number;
 // username: string;

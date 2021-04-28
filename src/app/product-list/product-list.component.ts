@@ -29,7 +29,7 @@ export class ProductListComponent {
 
   getProducts(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.productService.getProducts(id)
+    this.productService.GetByCategory(id)
       .subscribe(items => this.items = items);
   }
 }
